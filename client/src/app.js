@@ -17,9 +17,6 @@ function handleSubmit(event) {
     },
     body: JSON.stringify({ formValues }),
   });
+  form.reset();
+  alert("Task successfully added");
 }
-
-// const data = response.json();
-// alert("Task successfully added");
-// form.reset();
-//displayGoals();
