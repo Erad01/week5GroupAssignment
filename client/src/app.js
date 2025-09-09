@@ -4,29 +4,22 @@ const form = document.getElementById("form-container");
 
 //Add a submit event to the DOM
 
-form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+form.addEventListener("submit", handleSubmit);
 
-    const formData = new FormData(form);
+function handleSubmit(event) {
+  event.preventDefault();
+  const formData = new FormData(commentsForm);
+  const formValues = Object.fromEntries(formData);
+  fetch("https://week5groupassignment.onrender.com/add-goals", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ formValues }),
+  });
+}
 
-    const formValues = Object.fromEntries(formData);
-
-    console.log(formValues)
-
-    const response = await fetch("https://week5groupassignment.onrender.com/add-goals",
-        {
-            method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify({formValues})
-
-        }
-    );
-
-    const data = await response.json()
-    alert("Task successfully added");
-    form.reset();
-    //displayGoals();
-
-})
+// const data = response.json();
+// alert("Task successfully added");
+// form.reset();
+//displayGoals();
