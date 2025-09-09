@@ -8,7 +8,7 @@ form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
-  const formData = new FormData(commentsForm);
+  const formData = new FormData(form);
   const formValues = Object.fromEntries(formData);
   fetch("https://week5groupassignment.onrender.com/add-goals", {
     method: "POST",
