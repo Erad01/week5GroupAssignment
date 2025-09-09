@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Goals</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/app.js" defer type="module"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Daily Goals</h1>
+    </header>
+    <main>
+      <form id="form-container">
+        <label for="name">Task Name:</label>
+        <input type="text" name="name" required />
+        <label for="eventTime">Event Time:</label>
+        <input type="text" name="eventTime" required />
+        <label for="details">Details:</label>
+        <textarea name="details" id="" required></textarea>
+        <label for="priority">Priority</label>
+        <input type="text" name="priority" />
+        <button id="submit-btn" type="submit">Submit</button>
+      </form>
+    </main>
+    <section id="task-container">
+      <p>Task</p>
+    </section>
+
+    <footer>
+      <button id="task-complete">Completed Task</button>
+    </footer>
+  </body>
+</html>
