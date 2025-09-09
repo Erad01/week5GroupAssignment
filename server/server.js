@@ -43,7 +43,7 @@ app.post("/add-goals", (req, res) => {
     [
       newGoals.formValues.name,
       newGoals.formValues.eventTime,
-      newGoals.formValues.pdetails,
+      newGoals.formValues.details,
       newGoals.formValues.priority,
     ]
   );
