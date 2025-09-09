@@ -39,10 +39,11 @@ app.post("/add-goals", (req, res) => {
   //database query
   //in our SQL queries, we can have a placeholder parameter that we will replace with the actual values when the client sends them
   const query = db.query(
-    `INSERT INTO goals(name, eventTime, details, priority) VALUES ($1, $2, $3, $4)`,
+    `INSERT INTO goals(name, fromtime, totime, details, priority) VALUES ($1, $2, $3, $4, $5)`,
     [
       newGoals.formValues.name,
-      newGoals.formValues.eventTime,
+      newGoals.formValues.fromtime,
+      newGoals.formValues.totime,
       newGoals.formValues.details,
       newGoals.formValues.priority,
     ]
