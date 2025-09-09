@@ -1,5 +1,5 @@
 //imports
-import express from "espress";
+import express from "express";
 import cors from "cors";
 import { db } from "./dbConnection.js";
 
