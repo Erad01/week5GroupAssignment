@@ -1,6 +1,7 @@
 //collect data from the user and send to server
 
 const form = document.getElementById("form-container");
+const taskContainer = document.getElementById("task-container");
 
 //Add a submit event to the DOM
 
