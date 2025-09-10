@@ -7,6 +7,8 @@ body {
   grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 0.125fr 1fr 0.125fr;
   background-color: aqua;
+  font-size: 15px;
+    
 }
 
 header {
@@ -43,12 +45,31 @@ section {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: chocolate;
-  margin: 5px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   overflow: scroll;
   overflow-x: hidden;
+  gap: 5px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+
+section h1{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+div.goal-entry{
+  margin: 5px;
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgb(225, 212, 27);
+  border-radius: 10px;
+  gap: 5px;
+  padding-left: 5px;
 }
 
 button:hover {
@@ -81,3 +102,8 @@ footer {
 #opt3 {
   background-color: green;
 }
+
+@media (min-width: 1000px){
+  body {
+  max-width: 70%;
+}}
