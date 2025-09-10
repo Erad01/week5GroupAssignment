@@ -16,16 +16,19 @@
         <label for="name">Task Name:</label>
         <input type="text" name="name" required />
         <br />
-
         <label for="fromtime">From:</label>
         <input type="time" name="fromtime" required />
         <label for="totime">To:</label>
         <input type="time" name="totime" required />
-
         <br /><label for="details">Details:</label>
-        <textarea name="details" id="" required rows="10" cols="26"></textarea>
+        <textarea name="details" required rows="6" cols="24"></textarea>
         <br /><label for="priority">Priority</label>
-        <input type="text" name="priority" />
+        <select name="priority" id="priority">
+          <option value="" selected disabled>Select a priority</option>
+          <option id="opt1">High</option>
+          <option id="opt2">Medium</option>
+          <option id="opt3">Low</option>
+        </select>
         <br /><button id="submit-btn" type="submit">Submit</button>
       </form>
     </main>
@@ -34,7 +37,7 @@
     </section>
 
     <footer>
-      <button id="task-complete">Completed Task</button>
+      <button id="task-complete">Completed Tasks</button>
     </footer>
   </body>
 </html>

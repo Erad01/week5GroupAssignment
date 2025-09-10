@@ -16,6 +16,9 @@ header {
   grid-row-end: 2;
   background-color: blue;
   margin: 5px;
+  font-size: 25px;
+  text-align: center;
+  align-content: center;
 }
 
 main {
@@ -24,9 +27,13 @@ main {
   grid-row-start: 2;
   grid-row-end: 3;
   background-color: blueviolet;
+  margin: 5px;
+  align-content: center;
+}
+
+form {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   margin: 5px;
   padding: 5px;
 }
@@ -38,6 +45,10 @@ section {
   grid-row-end: 3;
   background-color: chocolate;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 footer {
@@ -46,11 +57,24 @@ footer {
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: darkgreen;
-  margin-bottom: 5px;
+  margin: 5px;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 #task-complete {
   margin: 5px;
+}
+
+#opt1 {
+  background-color: red;
+}
+
+#opt2 {
+  background-color: yellow;
+}
+
+#opt3 {
+  background-color: green;
 }
