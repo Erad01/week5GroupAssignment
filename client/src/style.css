@@ -8,7 +8,6 @@ body {
   grid-template-rows: 0.125fr 1fr 0.125fr;
   background-color: aqua;
   font-size: 15px;
-    
 }
 
 header {
@@ -54,15 +53,14 @@ section {
   margin: 5px;
   padding: 5px;
   border-radius: 10px;
-  
 }
 
-section h1{
+section h1 {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
 }
-div.goal-entry{
+div.goal-entry {
   margin: 5px;
   display: flex;
   justify-content: flex-start;
@@ -102,8 +100,3 @@ footer {
 #opt3 {
   background-color: green;
 }
-
-@media (min-width: 1000px){
-  body {
-  max-width: 70%;
-}}
