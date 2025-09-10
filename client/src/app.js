@@ -32,7 +32,6 @@ async function displayGoals() {
   );
   allGoals = await response.json();
 
-
   //clear old tasks
   taskContainer.innerHTML = "<h1>Tasks</h1>";
 
@@ -40,10 +39,12 @@ async function displayGoals() {
     const div = document.createElement("div");
     div.classList.add("goal-entry");
     div.innerHTML = `
-    <input type = "checkbox" class = "task-checkbox" ${goal.completed ? "checked" : ""}/>
+    <input type = "checkbox" class = "task-checkbox" ${
+      goal.completed ? "checked" : ""
+    }/>
     <div class = "task-content">
     
-    <h3>${goal.name}</h3>
+    <h3><strong>${goal.name}<strong></h3>
     <p><strong>From:</strong>${goal.fromtime}</p>
     <p><strong>To:</strong> ${goal.totime}</p>
       <p><strong>Details:</strong> ${goal.details}</p>
@@ -53,21 +54,59 @@ async function displayGoals() {
       `;
     const checkbox = div.querySelector(".task-checkbox");
     const content = div.querySelector(".task-content");
-    if(goal.completed)content.classList.add("completed")
-
-      checkbox.addEventListener("change",() =>{
-        content.classList.toggle("completed", checkbox.checked);
-        goal.completed = checkbox.checked;
-        if(showingCompleted && !checkbox.checked){
-          taskContainer.removeChild(div);
-        }
-      })
-
+    if (goal.completed) content.classList.add("completed");
+    checkbox.addEventListener("change", () => {
+      content.classList.toggle("completed", checkbox.checked);
+      goal.completed = checkbox.checked;
+      if (showingCompleted && !checkbox.checked) {
+        taskContainer.removeChild(div);
+      }
+    });
     taskContainer.appendChild(div);
   });
-
 }
+
+// Complete task toggle
+document.getElementById("task-complete").addEventListener("click", () => {
+  showingCompleted = !showingCompleted;
+  taskContainer.innerHTML = showingCompleted
+    ? // ? is a shorthand for else if
+      "<h1>Completed tasks</h1>"
+    : "<h1>Tasks</h1>";
+  const goalsToShow = showingCompleted
+    ? allGoals.filter((goal) => goal.completed)
+    : allGoals;
+
+  goalsToShow.forEach((goal) => {
+    const div = document.createElement("div");
+    div.classList.add("goal-entry");
+    div.innerHTML = `
+    <input type="checkbox" class="task-checkbox" ${
+      goal.completed ? "checked" : ""
+    }/>
+    <div class="task-content">
+    <h3><strong>${goal.name}<strong></h3>
+    <p><strong>From:</strong>${goal.fromtime}</p>
+    <p><strong>To:</strong> ${goal.totime}</p>
+      <p><strong>Details:</strong> ${goal.details}</p>
+      <p><strong>Priority:</strong> ${goal.priority}</p>
+      </div>
+      <hr>
+    `;
+    const checkbox = div.querySelector(".task-checkbox");
+    const content = div.querySelector(".task-content");
+    if (goal.completed) content.classList.add("completed");
+
+    checkbox.addEventListener("change", () => {
+      content.classList.toggle("completed", checkbox.checked);
+      goal.completed = checkbox.checked;
+      if (showingCompleted && !checkbox.checked) {
+        taskContainer.removeChild(div);
+      }
+    });
+    taskContainer.appendChild(div);
+  });
+});
 
 //load tasks when the page opens
 document.addEventListener("DOMContentLoaded", displayGoals);
-
