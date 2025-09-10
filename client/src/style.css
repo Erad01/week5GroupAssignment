@@ -70,6 +70,10 @@ div.goal-entry {
   padding-left: 5px;
 }
 
+#submit-btn {
+  max-width: 100px;
+  transform: translateX(250%);
+}
 button:hover {
   cursor: pointer;
 }
