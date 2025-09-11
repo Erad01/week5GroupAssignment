@@ -47,8 +47,9 @@ async function displayGoals() {
     <h1><strong>${goal.name}<strong></h1>
     <p><strong>From:</strong>${goal.fromtime}</p>
     <p><strong>To:</strong> ${goal.totime}</p>
+    <p><strong>Priority:</strong> ${goal.priority}</p>
       <p><strong>Details:</strong> ${goal.details}</p>
-      <p><strong>Priority:</strong> ${goal.priority}</p>
+      
       </div>
       <hr> 
       `;
@@ -88,8 +89,9 @@ document.getElementById("task-complete").addEventListener("click", () => {
     <h1><strong>${goal.name}<strong></h1>
     <p><strong>From:</strong>${goal.fromtime}</p>
     <p><strong>To:</strong> ${goal.totime}</p>
+    <p><strong>Priority:</strong> ${goal.priority}</p>
       <p><strong>Details:</strong> ${goal.details}</p>
-      <p><strong>Priority:</strong> ${goal.priority}</p>
+      
       </div>
       <hr>
     `;
