@@ -6,8 +6,13 @@ body {
   width: 100vw;
   grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 0.125fr 1fr 0.125fr;
-  background-color: aqua;
+  background-image: url(./images/photo-1589496933738-f5c27bc146e3.jpg);
   font-size: 15px;
+  color: white;
+  max-width: 1000px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 header {
@@ -15,7 +20,7 @@ header {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: blue;
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 5px;
   font-size: 25px;
   text-align: center;
@@ -27,7 +32,7 @@ main {
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: blueviolet;
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 5px;
   align-content: center;
 }
@@ -44,7 +49,7 @@ section {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   overflow: scroll;
@@ -53,6 +58,7 @@ section {
   margin: 5px;
   padding: 5px;
   border-radius: 10px;
+  scroll-behavior: smooth;
 }
 
 section h1 {
@@ -72,7 +78,9 @@ div.goal-entry {
 
 #submit-btn {
   max-width: 100px;
-  transform: translateX(250%);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 button:hover {
   cursor: pointer;
@@ -82,7 +90,7 @@ footer {
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: darkgreen;
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 5px;
   display: flex;
   align-items: center;
