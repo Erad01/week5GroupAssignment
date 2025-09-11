@@ -39,9 +39,9 @@ async function displayGoals() {
     const div = document.createElement("div");
     div.classList.add("goal-entry");
     div.innerHTML = `
-    <label for="checkbox"><input name="checkbox" type = "checkbox" id= "checkbox-id" class = "task-checkbox" ${
+    <input aria-label="Mark this task as complete" name="checkbox" type = "checkbox" id= "checkbox-id" class = "task-checkbox" ${
       goal.completed ? "checked" : ""
-    }/></label>
+    }/>
     <div class = "task-content">
     
     <h1><strong>${goal.name}<strong></h1>
@@ -82,9 +82,9 @@ document.getElementById("task-complete").addEventListener("click", () => {
     const div = document.createElement("div");
     div.classList.add("goal-entry");
     div.innerHTML = `
-     <label for="checkbox"><input name="checkbox" type="checkbox" id = "checkbox-id" class="task-checkbox" ${
+     <input aria-label="Mark this task as complete" name="checkbox" type="checkbox" id = "checkbox-id" class="task-checkbox" ${
        goal.completed ? "checked" : ""
-     }/></label>
+     }/>
     <div class="task-content">
     <h1><strong>${goal.name}<strong></h1>
     <p><strong>From:</strong>${goal.fromtime}</p>
