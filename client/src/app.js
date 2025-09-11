@@ -6,6 +6,9 @@ let allGoals = [];
 
 let showingCompleted = false;
 
+let point = 0;
+const pointGoal = document.getElementById("point-container")
+
 //Add a submit event to the DOM
 
 form.addEventListener("submit", handleSubmit);
@@ -58,7 +61,19 @@ async function displayGoals() {
     if (goal.completed) content.classList.add("completed");
     checkbox.addEventListener("change", () => {
       content.classList.toggle("completed", checkbox.checked);
-      goal.completed = checkbox.checked;
+      
+      if(checkbox.checked){
+        point++;
+        if(point === 5){
+          pointGoal.textContent = "CONGRATULATIONS"
+          pointGoal.style.display = "block";
+        }
+        else{pointGoal.textContent = ""}
+      }
+      else{
+        point--;
+      }
+      console.log(point)
       if (showingCompleted && !checkbox.checked) {
         taskContainer.removeChild(div);
       }
