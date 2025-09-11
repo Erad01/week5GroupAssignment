@@ -159,3 +159,7 @@ textarea:invalid {
 button {
   font-weight: bold;
 }
+
+#point-container{
+  display: none;
+}
