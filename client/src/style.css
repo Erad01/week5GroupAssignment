@@ -22,7 +22,7 @@ header {
   grid-row-end: 2;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 5px;
-  font-size: 25px;
+  font-size: 35px;
   text-align: center;
   align-content: center;
 }
@@ -74,6 +74,13 @@ div.goal-entry {
   border-radius: 10px;
   gap: 5px;
   padding-left: 5px;
+  color: black;
+}
+
+div.goal-entry h1{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
 }
 
 #submit-btn {
