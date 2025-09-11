@@ -119,3 +119,7 @@ footer {
 #opt3 {
   background-color: green;
 }
+
+#checkbox-id:hover{
+  cursor: pointer;
+}
